@@ -10,6 +10,7 @@
     --border-color: #EEEEEE;
     --gradient-color: rgba(47, 48, 58, 0.4);
     --clients-color: #AFB1B8;
+    --icons: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -32,7 +33,7 @@ a {
     text-decoration: none;
 }
 
-   
+
 /* Conteiner */
 
 .box {
@@ -73,7 +74,17 @@ a {
     padding-right: 200px;
 }
 
-.container-work,
+.box.container-work {
+    width: 1200px;
+    height: 248px;
+    /* outline: 2px solid var(--accent-color); */
+    margin-left: auto;
+    margin-right: auto;
+    margin: 94px auto;
+    padding: 0 15px;
+}
+
+
 .container-about,
 .container-project {
     margin: 94px auto;
@@ -235,33 +246,21 @@ a {
     margin-right: 0;
 }
 
-.flex-text::before {
-    content: "";
-    display: block;
+.svg-work {
+    fill: currentColor;
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+
+.icon-astronaut,
+.icon-diagram,
+.icon-antenna,
+.icon-clock {
+    background-color: var(--background-color);
+    width: 270px;
     height: 120px;
-    /* outline: 2px solid var(--accent-color); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--background-color);
-    margin-bottom: 30px;
     border-radius: 4px;
-    background-color: var(--background-color);
-}
-
-.icon-antenna::before {
-    background-image: url(../img/antenna_1.png);
-}
-
-.icon-clock::before {
-    background-image: url(../img/clock_1.png);
-}
-
-.icon-diagram::before {
-    background-image: url(../img//diagram_1.png);
-}
-
-.icon-astronaut::before {
-    background-image: url(../img/astronaut_1.png);
 }
 
 .flex-text:nth-child(4n) {
@@ -386,7 +385,7 @@ a {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -509,16 +508,14 @@ a {
     color: var(--background-color-h1);
 }
 
-.conteiner-seti {
+.conteiner-networks {
     display: flex;
     flex-direction:column;
-    width: 230px;
-    height: 90px;
-   margin-top: 75px;
-   margin-left: 70px;
+    margin-top: 75px;
+    margin-left: 70px;
 }
 
-.flex-seti {
+.flex-networks {
     display: flex;
 }
 
@@ -553,56 +550,60 @@ a {
     display: flex;
 }
 
-.icon-face {
+.insta,
+.twit,
+.face,
+.linked {
+    color: var(--background-color-h1);
     width: 44px;
     height: 44px;
-    display: inline-block;
-    background-image: url(../img/ellipse.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: var(--icons);
 }
 
-.icon-ellips {
+.icon-link,
+.icon-face,
+.icon-twit,
+.icon-insta {
+    color:var(--clients-color);
     width: 44px;
     height: 44px;
-    display: inline-block;
-    background-image: url(../img/linkedin.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
-.icon-linkedin {
-    width: 44px;
-    height: 44px;
-    display: inline-block;
-    background-image: url(../img/twitter.png);
-    background-position: center;
-    background-repeat: no-repeat;
+.insta:hover,
+.twit:hover,
+.face:hover,
+.linked:hover,
+.icon-link:hover,
+.icon-face:hover,
+.icon-twit:hover,
+.icon-insta:hover {
+    color:var(--background-color-h1);
+    background-color: var(--accent-color);
 }
 
-.icon-twit {
-    width: 44px;
-    height: 44px;
-    display: inline-block;
-    background-image: url(../img/instagram.png);
-    background-position: center;
-    background-repeat: no-repeat;
+.svg {
+    fill: currentColor;
+    width: 22px;
+    height: 22px;
+    margin-left: 11px;
+    margin-top: 11px;  
 }
 
-
-.icon-face {
+.icon-insta {
     margin-right: 10px;
     margin-left: 32px;
 }
 
-.icon-ellips {
+.insta,
+.face,
+.twit,
+.icon-twit,
+.icon-face {
     margin-right: 10px;
 }
 
-.icon-linkedin {
-    margin-right: 10px;
-}
-
-.icon-twit {
+.icon-link {
     margin-right: 32px;
 }
