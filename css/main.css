@@ -63,16 +63,18 @@ a {
     padding: 0 15px;
 }
 
+
 .container-clients {
-    width: 1600px;
+    width: 1200px;
     height: 372px;
     /* outline: 2px solid var(--accent-color); */
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 94px;
-    padding-left: 200px;
-    padding-right: 200px;
 }
+
 
 .box.container-work {
     width: 1200px;
@@ -171,7 +173,7 @@ a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .link-connection::before {
@@ -200,50 +202,40 @@ a {
     margin-left: auto; 
 }
 
+
 .clients-flex {
     display: flex;
-    justify-content: center;
-    /* outline: 2px solid var(--accent-color); */
+    justify-content:space-between;
 }
 
 
-.flex-pic::before {
-    content: "";
-    display: inline-block;
-    height: 92px;
+
+
+.flex-pic {
     width: 170px;
-    outline: 1px solid var(--clients-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--background-color);
-    margin-right: 30px;
+    height: 92px;
     border-radius: 4px;
-    
+    border: 2px solid;
+    border-color: var(--clients-color);
 }
 
-.flex-pic.logi::before {
-    background-image: url(../img/Logo.png);
+.clients {
+    display: inline-block;
+    padding: 16px 32px;
+    color: var(--clients-color);
 }
 
-.flex-pic.logo2::before {
-    background-image: url(../img/Logo2.png);
+.svg-clients {
+    fill: currentColor;
+    width: 106px;
+    height: 60px;
 }
 
-.flex-pic.logo3::before {
-    background-image: url(../img/Logo3.png);
-}
-
-.flex-pic.logo4::before {
-    background-image: url(../img/Logo4.png);
-}
-
-.flex-pic.logo5::before {
-    background-image: url(../img/Logo5.png);
-}
-
-.flex-pic.logo6::before {
-    background-image: url(../img/Logo6.png);
-    margin-right: 0;
+.flex-pic:hover,
+.clients:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .svg-work {
