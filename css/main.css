@@ -16,6 +16,7 @@
     --backdrop: rgba(0, 0, 0, 0.2);
     --modal-color-svg: rgba(33, 33, 33, 1);
     --modal-input-color: rgba(33, 33, 33, 0.2);
+    --border-header: rgba(236, 236, 236, 1);
 }
 
 
@@ -133,9 +134,12 @@ pre {
 } */
 
 .headerr {
+    width: 1600px;
     height: 80px;
-    width: 1200px;
     margin: 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-header);
 }
 
 .container {
@@ -155,6 +159,8 @@ pre {
 .box-navigation {
     display: flex;
     padding: 0 15px;
+    margin-left: 215px;
+    margin-right: 215px;
 }
 
 .connection-nav {
@@ -197,7 +203,7 @@ pre {
     position: relative;
 }
 
- .current::after {
+ /* .current::after {
     position: absolute;
     content: "";
     transition: opacity 250ms var(--animation);
@@ -208,17 +214,17 @@ pre {
     left: 0;
     border-radius: 2px; 
     opacity: 0;
- }
+ } */
 
- .current:hover::after,
+ /* .current:hover::after,
  .current:focus::after {
     color: var(--accent-color);
     opacity: 1;
- }
+ } */
 
- .current {
+ /* .current {
     position: relative;
- }
+ } */
 
 
 
@@ -823,18 +829,6 @@ input:focus-within ~ .svg-email {
     justify-content: space-between;  
 }
 
-.animation-overlay {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 
-    transform 250ms var(--animation);
-    transform: translateY(100%);
-    background-color: var(--animation-color); 
-}
-
 .animation-img {
     position: relative;
     overflow: hidden;
@@ -858,14 +852,31 @@ input:focus-within ~ .svg-email {
 
 .animation-overlay {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0px;
     right: 0px;
-    transform: translate(-50%, -50%),
-    translateY(100%);
+    transform: translateY(100%);
     opacity: 0;
     transition: opacity 250ms var(--animation),
-    transform 250ms var(--animation);;
+    transform 250ms var(--animation);
+    background-color: var(--animation-color);
 }
+
+.text-animation {
+    padding: 20px 24px;
+}
+
+/* .animation-overlay {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: transform 250ms var(--animation);
+    transform: translateY(100%);
+    background-color: var(--animation-color);
+} */
 
 .flex-element:hover .animation-overlay {
     opacity: 1;
@@ -905,7 +916,8 @@ input:focus-within ~ .svg-email {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    margin: 20px 24px 0px;
+    margin: 0;
+    /* margin: 20px 24px 0px; */
 }
 
 /* .container-project {
@@ -924,7 +936,9 @@ input:focus-within ~ .svg-email {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
-    margin: 0px 24px 20px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    /* margin: 0px 24px 20px; */
 }
 
 .no-gap {
